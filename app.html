@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Corporate Registry — Pan-American Business Formation & Registered Agent</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f5fa',
+              100: '#e1ebf5',
+              500: '#005a9c',
+              600: '#00487d',
+              700: '#00375f',
+              800: '#002540',
+              900: '#001423',
+            },
+            accent: {
+              500: '#d97706',
+              600: '#b45309',
+            },
+            surface: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              800: '#1e293b',
+              900: '#0f172a',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-hero {
+      background: radial-gradient(circle at 50% 0%, #1e3a8a 0%, #0f172a 75%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+    }
+    .dark .glass-card {
+      background: rgba(30, 41, 59, 0.9);
+    }
+  </style>
+</head>
+<body class="bg-surface-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- TOP STATUTORY NOTICE BAR -->
+  <aside class="bg-brand-900 text-brand-100 text-xs py-2 px-4 border-b border-brand-800" aria-label="Statutory compliance notice">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Official 50-State Statutory Representation Network &middot; Texas Registered Agent #0803450153</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300">
+        <span>Legal Underwriting: <strong class="text-white">Antochi Law PLLC</strong></span>
+        <span>&middot;</span>
+        <span>Tech Infrastructure: <strong class="text-white">Amicus Technology</strong></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVIGATION -->
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3 cursor-pointer" onclick="switchView('landing')">
+        <div class="w-11 h-11 bg-brand-700 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md border border-brand-600">
+          🏛️
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight text-brand-900 block leading-tight">NATIONAL CORPORATE REGISTRY</span>
+          <span class="text-xs font-semibold tracking-wider text-slate-500 uppercase">Pan-American Entity Services</span>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-700">
+        <a href="#formation" onclick="switchView('wizard')" class="hover:text-brand-600 transition">Start an LLC</a>
+        <a href="#registered-agent" class="hover:text-brand-600 transition">Registered Agent</a>
+        <a href="#privacy-shield" class="hover:text-brand-600 transition">Address Privacy Shield</a>
+        <a href="#business-identity" class="hover:text-brand-600 transition">Business Identity</a>
+        <a href="#pricing" class="hover:text-brand-600 transition">50-State Fees</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button onclick="switchView('portal')" class="px-4 py-2 text-sm font-semibold text-brand-700 hover:bg-brand-50 rounded-lg transition border border-brand-200 flex items-center gap-2">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Client Portal
+        </button>
+        <button onclick="switchView('wizard')" class="px-5 py-2.5 text-sm font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm hover:shadow transition flex items-center gap-2">
+          <span>Form Company</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-grow">
+    
+    <!-- VIEW 1: LANDING PAGE -->
+    <section id="view-landing" class="block">
+      <!-- HERO -->
+      <div class="gradient-hero text-white pt-20 pb-28 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 text-xs font-semibold mb-6">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> The Pan-American Corporate Alternative to Northwest
+          </div>
+          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight sm:leading-none mb-6">
+            Form Your Company With Complete <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-sky-200 to-indigo-200">Address Privacy</span> Across All 50 States.
+          </h1>
+          <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Never put your home address on public state records. We provide official statutory Registered Agent service, commercial business address, digital mailroom, and Day-1 compliance backing.
+          </p>
+
+          <!-- QUICK SELECTOR WIDGET -->
+          <div class="max-w-3xl mx-auto bg-white rounded-2xl p-4 sm:p-6 shadow-2xl text-slate-900 border border-slate-100 flex flex-col sm:flex-row gap-4 items-center">
+            <div class="flex-1 text-left w-full">
+              <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Select Entity Type</label>
+              <select id="quick-entity" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                <option value="LLC">Limited Liability Company (LLC)</option>
+                <option value="CORP">C-Corporation / S-Corporation</option>
+                <option value="NONPROFIT">Non-Profit Corporation</option>
+              </select>
+            </div>
+
+            <div class="flex-1 text-left w-full">
+              <label class="block text-xs font-bold text-slate-500 uppercase mb-1">State of Formation</label>
+              <select id="quick-state" onchange="updateHeroPricing()" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                <option value="TX">Texas ($300 State Fee)</option>
+                <option value="WY">Wyoming ($102 State Fee)</option>
+                <option value="DE">Delaware ($110 State Fee)</option>
+                <option value="FL">Florida ($125 State Fee)</option>
+                <option value="NV">Nevada ($425 State Fee)</option>
+              </select>
+            </div>
+
+            <div class="w-full sm:w-auto">
+              <button onclick="startWizardFromHero()" class="w-full sm:w-auto px-8 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2 whitespace-nowrap">
+                <span>Start Now</span>
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap justify-center items-center gap-8 text-xs text-slate-400">
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Free 365 Days Address Privacy</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Guaranteed Same-Day SOS Dispatch</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> D-13 Attorney Supervision</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 PILLARS OF PRIVACY & AUTHORITY -->
+      <div class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl mb-4">
+            The Gold Standard in Domestic Entity Protection
+          </h2>
+          <p class="text-slate-600 text-lg">
+            Traditional corporate formation mills sell your phone number to spammers and put your home bedroom address on permanent state databases. We take the opposite approach.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- CARD 1 -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="w-12 h-12 bg-blue-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+              <i data-lucide="map-pin-off" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Permanent Address Shield</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              We list our commercial office address on all public Articles of Organization, Organizer declarations, and annual filings. Your personal residence remains 100% private.
+            </p>
+            <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Zero Home Exposure &rarr;</span>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-6">
+              <i data-lucide="mail-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Live Digital Mailroom</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Every legal notice, tax notification, and court summons is opened, scanned with high-resolution OCR, and uploaded to your secure client vault within minutes of arrival.
+            </p>
+            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Instant SMS & Email Alerts &rarr;</span>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
+              <i data-lucide="scale" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Licensed Counsel Backing</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Supervised under Texas Bar Rule 5.3 by Antochi Law PLLC (Managing Attorney Kanesia Mitchell, Esq.). Total ethical legitimacy and attorney-client privilege boundaries.
+            </p>
+            <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">UPL Immune Legal Moat &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: FORMATION WIZARD -->
+    <section id="view-wizard" class="hidden py-12 px-4 max-w-4xl mx-auto">
+      <div class="mb-8">
+        <button onclick="switchView('landing')" class="text-xs font-semibold text-slate-500 hover:text-brand-600 flex items-center gap-1 mb-4">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Overview
+        </button>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">National Formation & Registered Agent Intake</h2>
+        <p class="text-slate-500 text-sm mt-1">Complete your formation details. Our autonomous dispatch engine files directly with the Secretary of State.</p>
+      </div>
+
+      <!-- PROGRESS STEPS -->
+      <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-8 text-xs font-semibold">
+        <div id="step-nav-1" class="flex items-center gap-2 text-brand-600 font-bold">
+          <span class="w-6 h-6 rounded-full bg-brand-600 text-white flex items-center justify-center">1</span>
+          <span>Entity & State</span>
+        </div>
+        <div class="h-0.5 w-8 bg-slate-200"></div>
+        <div id="step-nav-2" class="flex items-center gap-2 text-slate-400">
+          <span class="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center">2</span>
+          <span>Privacy & Address</span>
+        </div>
+        <div class="h-0.5 w-8 bg-slate-200"></div>
+        <div id="step-nav-3" class="flex items-center gap-2 text-slate-400">
+          <span class="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center">3</span>
+          <span>1-Click Startup Stack</span>
+        </div>
+        <div class="h-0.5 w-8 bg-slate-200"></div>
+        <div id="step-nav-4" class="flex items-center gap-2 text-slate-400">
+          <span class="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center">4</span>
+          <span>Review & Dispatch</span>
+        </div>
+      </div>
+
+      <!-- STEP 1 CONTAINER -->
+      <div id="wizard-step-1" class="space-y-6">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 mb-4">1. Proposed Company Name</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="sm:col-span-2">
+              <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Legal Business Name</label>
+              <input id="input-entity-name" type="text" placeholder="e.g. Apex Strategic Logistics" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 font-medium focus:ring-2 focus:ring-brand-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Corporate Suffix</label>
+              <select id="input-suffix" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 font-medium focus:ring-2 focus:ring-brand-500 outline-none">
+                <option value="LLC">LLC</option>
+                <option value="L.L.C.">L.L.C.</option>
+                <option value="Limited Liability Company">Limited Liability Company</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 mb-4">2. Jurisdiction & Filing Speed</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase mb-1">State</label>
+              <select id="wizard-state" onchange="calcTotal()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 font-medium focus:ring-2 focus:ring-brand-500 outline-none">
+                <option value="TX" data-fee="300">Texas — $300 Secretary of State Fee</option>
+                <option value="WY" data-fee="102">Wyoming — $102 Secretary of State Fee</option>
+                <option value="DE" data-fee="110">Delaware — $110 Division of Corporations</option>
+                <option value="FL" data-fee="125">Florida — $125 Division of Corporations</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Dispatch Speed</label>
+              <select id="input-speed" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 font-medium focus:ring-2 focus:ring-brand-500 outline-none">
+                <option value="STANDARD">Standard Electronic Dispatch (Included)</option>
+                <option value="RUSH">Same-Day VIP Priority Rush (+$50)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-end">
+          <button onclick="goToWizardStep(2)" class="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-lg transition flex items-center gap-2">
+            <span>Next: Address Privacy</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 2 CONTAINER -->
+      <div id="wizard-step-2" class="hidden space-y-6">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Registered Agent & Address Privacy Selection</h3>
+          <p class="text-sm text-slate-500 mb-6">Choose how your company address will appear on public state databases.</p>
+
+          <div class="space-y-4">
+            <label class="block p-4 border-2 border-brand-600 rounded-xl bg-brand-50/50 cursor-pointer">
+              <div class="flex items-start justify-between">
+                <div class="flex items-start gap-3">
+                  <input type="radio" name="privacy-choice" value="PRIVACY_SHIELD" checked class="mt-1 text-brand-600">
+                  <div>
+                    <span class="font-bold text-brand-900 block">Use National Corporate Registry Address (Recommended)</span>
+                    <span class="text-xs text-slate-600 block mt-1">We serve as your official Statutory Registered Agent. Our commercial Austin / Red Oak address appears on public records. Includes Digital Mailroom scanning.</span>
+                  </div>
+                </div>
+                <span class="font-bold text-brand-700 text-sm">$125 / year</span>
+              </div>
+            </label>
+
+            <label class="block p-4 border border-slate-200 rounded-xl hover:bg-slate-50 cursor-pointer">
+              <div class="flex items-start justify-between">
+                <div class="flex items-start gap-3">
+                  <input type="radio" name="privacy-choice" value="OWN_ADDRESS" class="mt-1 text-brand-600">
+                  <div>
+                    <span class="font-bold text-slate-900 block">Act as My Own Registered Agent</span>
+                    <span class="text-xs text-slate-500 block mt-1">Your home or office address will be permanently published on the Secretary of State searchable database.</span>
+                  </div>
+                </div>
+                <span class="font-bold text-slate-500 text-sm">$0</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="flex justify-between">
+          <button onclick="goToWizardStep(1)" class="px-5 py-2 border border-slate-300 font-semibold text-slate-700 rounded-lg hover:bg-slate-50 transition">Back</button>
+          <button onclick="goToWizardStep(3)" class="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-lg transition flex items-center gap-2">
+            <span>Next: Business Identity Stack</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 3 CONTAINER -->
+      <div id="wizard-step-3" class="hidden space-y-6">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-xs font-bold uppercase">1-Click Startup Stack</span>
+            <h3 class="text-lg font-bold text-slate-900">Professional Business Identity</h3>
+          </div>
+          <p class="text-sm text-slate-500 mb-6">Equip your new company with custom web domain, professional email, and virtual phone on Day 1.</p>
+
+          <div class="space-y-4">
+            <label class="flex items-start gap-4 p-4 border border-slate-200 rounded-xl hover:bg-slate-50 cursor-pointer">
+              <input type="checkbox" id="add-domain" checked onchange="calcTotal()" class="mt-1 w-4 h-4 text-brand-600 rounded">
+              <div class="flex-1">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-slate-900">Custom Domain & DNS (Cloudflare API)</span>
+                  <span class="text-xs font-bold text-slate-700">$20 / year</span>
+                </div>
+                <p class="text-xs text-slate-500 mt-1">Automatic .com registration with SSL certificate and privacy lock.</p>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-4 p-4 border border-slate-200 rounded-xl hover:bg-slate-50 cursor-pointer">
+              <input type="checkbox" id="add-mail" checked onchange="calcTotal()" class="mt-1 w-4 h-4 text-brand-600 rounded">
+              <div class="flex-1">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-slate-900">Professional Business Webmail (cPanel / 5 Mailboxes)</span>
+                  <span class="text-xs font-bold text-slate-700">$9 / month</span>
+                </div>
+                <p class="text-xs text-slate-500 mt-1">hello@yourcompany.com with IMAP/SMTP and webmail access.</p>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-4 p-4 border border-slate-200 rounded-xl hover:bg-slate-50 cursor-pointer">
+              <input type="checkbox" id="add-phone" checked onchange="calcTotal()" class="mt-1 w-4 h-4 text-brand-600 rounded">
+              <div class="flex-1">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-slate-900">Virtual Dedicated Business Phone (Twilio VoIP)</span>
+                  <span class="text-xs font-bold text-slate-700">$9 / month</span>
+                </div>
+                <p class="text-xs text-slate-500 mt-1">Local area code phone number with call & SMS forwarding to your cell.</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="flex justify-between">
+          <button onclick="goToWizardStep(2)" class="px-5 py-2 border border-slate-300 font-semibold text-slate-700 rounded-lg hover:bg-slate-50 transition">Back</button>
+          <button onclick="goToWizardStep(4)" class="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-lg transition flex items-center gap-2">
+            <span>Review Order</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 4 CONTAINER -->
+      <div id="wizard-step-4" class="hidden space-y-6">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 mb-4">Order Summary & Dispatch Review</h3>
+          
+          <div class="border-b border-slate-200 pb-4 mb-4 space-y-2 text-sm">
+            <div class="flex justify-between">
+              <span class="text-slate-600">Entity Formation Service:</span>
+              <span class="font-semibold text-slate-900" id="summary-name">Apex Strategic Logistics LLC (Texas)</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-600">Secretary of State Statutory Fee:</span>
+              <span class="font-mono font-semibold text-slate-900" id="summary-state-fee">$300.00</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-600">Statutory Registered Agent (1 Year):</span>
+              <span class="font-mono font-semibold text-slate-900" id="summary-ra-fee">$125.00</span>
+            </div>
+            <div class="flex justify-between" id="row-identity-addons">
+              <span class="text-slate-600">Startup Stack (Domain + Mail + VoIP):</span>
+              <span class="font-mono font-semibold text-slate-900" id="summary-identity-fee">$38.00</span>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center text-lg font-extrabold text-brand-900 pt-2">
+            <span>Total Due Today:</span>
+            <span class="text-2xl text-emerald-600 font-mono" id="summary-total">$463.00</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <h4 class="font-bold text-sm text-slate-900 uppercase tracking-wide">Organizer Contact Information</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Your Full Legal Name</label>
+              <input id="input-customer-name" type="text" placeholder="Johnathan Doe" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-brand-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Email Address</label>
+              <input id="input-customer-email" type="email" placeholder="john@example.com" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-brand-500 outline-none">
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <button onclick="goToWizardStep(3)" class="px-5 py-2 border border-slate-300 font-semibold text-slate-700 rounded-lg hover:bg-slate-50 transition">Back</button>
+          <button onclick="submitOrderToDispatch()" class="px-8 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-lg hover:shadow-xl transition flex items-center gap-2">
+            <i data-lucide="lock" class="w-4 h-4"></i>
+            <span>Pay & Disptach Formation</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 3: UNIFIED CLIENT OPERATIONS PORTAL -->
+    <section id="view-portal" class="hidden py-10 px-4 max-w-7xl mx-auto">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+        <div>
+          <span class="text-xs font-bold text-brand-600 tracking-wider uppercase">Unified Client Operations</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Client Entity Dashboard</h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <select class="bg-white border border-slate-200 text-sm font-semibold rounded-lg px-3 py-2 shadow-sm text-slate-800">
+            <option>Lone Star Logistics LLC (TX #0803450153)</option>
+            <option>Apex Dynamics Inc (WY #2026-00129)</option>
+          </select>
+          <button onclick="toggleBensonDrawer()" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-bold rounded-lg shadow-sm flex items-center gap-2">
+            <i data-lucide="bot" class="w-4 h-4"></i> Benson Copilot
+          </button>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="flex border-b border-slate-200 mb-8 space-x-8 text-sm font-bold text-slate-500">
+        <button class="text-brand-600 border-b-2 border-brand-600 pb-3 flex items-center gap-2">
+          <i data-lucide="shield-alert" class="w-4 h-4"></i> 5-Point Health Checklist
+        </button>
+        <button class="hover:text-slate-800 pb-3 flex items-center gap-2">
+          <i data-lucide="inbox" class="w-4 h-4"></i> Digital Mailroom (3 New)
+        </button>
+        <button class="hover:text-slate-800 pb-3 flex items-center gap-2">
+          <i data-lucide="globe" class="w-4 h-4"></i> Web, DNS & Phone
+        </button>
+        <button class="hover:text-slate-800 pb-3 flex items-center gap-2">
+          <i data-lucide="monitor" class="w-4 h-4"></i> Cloud Workspaces (WebDaaS)
+        </button>
+      </div>
+
+      <!-- 5-POINT HEALTH CHECKLIST -->
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-10">
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-slate-400">ITEM 1</span>
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">Articles Filed</h4>
+          <span class="text-xs text-slate-500 block">Filed on 11/12/2026</span>
+          <span class="mt-3 inline-block text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Active & Good Standing</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-slate-400">ITEM 2</span>
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">Federal EIN</h4>
+          <span class="text-xs text-slate-500 block">EIN: 84-3211201</span>
+          <span class="mt-3 inline-block text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Issued by IRS</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-slate-400">ITEM 3</span>
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">Operating Agreement</h4>
+          <span class="text-xs text-slate-500 block">Drafted by Antochi Law</span>
+          <span class="mt-3 inline-block text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Executed</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-amber-200 shadow-sm bg-amber-50/30">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-amber-700">ITEM 4</span>
+            <i data-lucide="alert-circle" class="w-5 h-5 text-amber-600"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">BOI FinCEN Report</h4>
+          <span class="text-xs text-slate-500 block">Due in 68 Days</span>
+          <span class="mt-3 inline-block text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Action Required</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold text-slate-400">ITEM 5</span>
+            <i data-lucide="clock" class="w-5 h-5 text-blue-500"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">Texas Franchise Tax</h4>
+          <span class="text-xs text-slate-500 block">Due May 15, 2027</span>
+          <span class="mt-3 inline-block text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Scheduled Radar</span>
+        </div>
+      </div>
+
+      <!-- DIGITAL MAILROOM PREVIEW -->
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mb-10">
+        <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
+          <div class="flex items-center gap-3">
+            <i data-lucide="mail" class="w-5 h-5 text-brand-600"></i>
+            <h3 class="font-bold text-slate-900">Recent Statutory Mail Received & Scanned</h3>
+          </div>
+          <span class="text-xs font-semibold text-slate-500">3 pieces scanned this week</span>
+        </div>
+        <div class="divide-y divide-slate-100 text-sm">
+          <div class="p-4 flex items-center justify-between hover:bg-slate-50 transition">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-blue-100 text-brand-700 flex items-center justify-center font-bold">
+                TX
+              </div>
+              <div>
+                <span class="font-bold text-slate-900 block">Texas Secretary of State — Filing Receipt & Certified Articles</span>
+                <span class="text-xs text-slate-500">Scanned 14 mins ago &middot; 4 Pages &middot; OCR Indexed</span>
+              </div>
+            </div>
+            <button class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded text-xs flex items-center gap-1.5">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i> Download PDF
+            </button>
+          </div>
+
+          <div class="p-4 flex items-center justify-between hover:bg-slate-50 transition">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+                IRS
+              </div>
+              <div>
+                <span class="font-bold text-slate-900 block">Department of the Treasury — CP-575 EIN Confirmation Letter</span>
+                <span class="text-xs text-slate-500">Scanned yesterday &middot; 2 Pages &middot; Official Notice</span>
+              </div>
+            </div>
+            <button class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded text-xs flex items-center gap-1.5">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i> Download PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BENSON AI COPILOT SLIDING DRAWER -->
+  <div id="benson-drawer" class="fixed inset-y-0 right-0 w-96 bg-white shadow-2xl border-l border-slate-200 transform translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col">
+    <div class="p-4 border-b border-slate-200 bg-brand-900 text-white flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+        <div>
+          <h3 class="font-bold text-sm">Benson AI Copilot</h3>
+          <span class="text-xs text-blue-200">OmniBrain-Powered Business Counsel</span>
+        </div>
+      </div>
+      <button onclick="toggleBensonDrawer()" class="text-slate-300 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <div class="flex-1 p-4 overflow-y-auto space-y-4 text-sm" id="benson-messages">
+      <div class="bg-blue-50 text-blue-900 p-3 rounded-xl border border-blue-100 text-xs">
+        👋 Hello! I am <strong>Benson</strong>, your autonomous corporate copilot. I am actively monitoring your Texas entity status, BOI deadlines, and incoming statutory mail. What can I draft or explain for you today?
+      </div>
+    </div>
+
+    <div class="p-3 border-t border-slate-200 bg-slate-50">
+      <div class="flex gap-2">
+        <input id="benson-input" type="text" placeholder="Ask Benson anything..." class="flex-1 text-xs bg-white border border-slate-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-brand-500">
+        <button onclick="sendBensonMessage()" class="px-3 py-2 bg-brand-600 text-white rounded-lg text-xs font-bold hover:bg-brand-700">
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-10 px-4 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>
+        <span class="text-white font-bold block mb-1">National Corporate Registry &middot; Antochi Trusted Agent Network</span>
+        <span>Corporate Headquarters: 104 E. Ovilla RD #279, Red Oak, TX 75154 &middot; Austin Legal Annex: 5900 Balcones Dr, Austin, TX 78731</span>
+      </div>
+      <div class="flex gap-6 text-slate-300">
+        <a href="#" class="hover:text-white">Terms of Representation</a>
+        <a href="#" class="hover:text-white">Privacy Policy</a>
+        <a href="#" class="hover:text-white">Attorney Supervision Disclosures</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function switchView(viewName) {
+      document.getElementById('view-landing').classList.add('hidden');
+      document.getElementById('view-wizard').classList.add('hidden');
+      document.getElementById('view-portal').classList.add('hidden');
+
+      if (viewName === 'landing') {
+        document.getElementById('view-landing').classList.remove('hidden');
+      } else if (viewName === 'wizard') {
+        document.getElementById('view-wizard').classList.remove('hidden');
+        goToWizardStep(1);
+      } else if (viewName === 'portal') {
+        document.getElementById('view-portal').classList.remove('hidden');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function startWizardFromHero() {
+      const state = document.getElementById('quick-state').value;
+      document.getElementById('wizard-state').value = state;
+      switchView('wizard');
+    }
+
+    function goToWizardStep(stepNum) {
+      for (let i = 1; i <= 4; i++) {
+        const stepEl = document.getElementById('wizard-step-' + i);
+        if (stepEl) stepEl.classList.add('hidden');
+      }
+      document.getElementById('wizard-step-' + stepNum).classList.remove('hidden');
+      calcTotal();
+    }
+
+    function calcTotal() {
+      const stateSelect = document.getElementById('wizard-state');
+      const selectedOption = stateSelect.options[stateSelect.selectedIndex];
+      const stateFee = parseFloat(selectedOption.getAttribute('data-fee') || '300');
+      const entityName = document.getElementById('input-entity-name').value || 'Proposed Enterprise';
+      const suffix = document.getElementById('input-suffix').value;
+
+      let identityFee = 0;
+      if (document.getElementById('add-domain').checked) identityFee += 20;
+      if (document.getElementById('add-mail').checked) identityFee += 9;
+      if (document.getElementById('add-phone').checked) identityFee += 9;
+
+      const raFee = 125.00;
+      const total = stateFee + raFee + identityFee;
+
+      document.getElementById('summary-name').innerText = `${entityName} ${suffix} (${selectedOption.text.split('—')[0].trim()})`;
+      document.getElementById('summary-state-fee').innerText = `$${stateFee.toFixed(2)}`;
+      document.getElementById('summary-ra-fee').innerText = `$${raFee.toFixed(2)}`;
+      document.getElementById('summary-identity-fee').innerText = `$${identityFee.toFixed(2)}`;
+      document.getElementById('summary-total').innerText = `$${total.toFixed(2)}`;
+    }
+
+    async function submitOrderToDispatch() {
+      const customerName = document.getElementById('input-customer-name').value || 'Valued Founder';
+      const customerEmail = document.getElementById('input-customer-email').value || 'founder@example.com';
+      const entityName = document.getElementById('input-entity-name').value || 'Apex Modern Enterprise';
+      const state = document.getElementById('wizard-state').value;
+
+      const payload = {
+        product_id: "tx_llc_formation",
+        customer_name: customerName,
+        customer_email: customerEmail,
+        inputs: {
+          entity_legal_name: entityName,
+          state: state,
+          registered_agent_name: "Antochi Trusted Agent & Corporate Services",
+          registered_office_address: "104 E. Ovilla RD #279, Red Oak, TX 75154",
+          add_identity_stack: document.getElementById('add-domain').checked
+        }
+      };
+
+      try {
+        const response = await fetch('http://127.0.0.1:8005/api/v1/dispatch/order', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+        alert(`Order Received! Order ID: ${data.order_id || 'ORD-9821'}\\n\\nFormation dispatched to Secretary of State. Redirecting to your unified client dashboard...`);
+        switchView('portal');
+      } catch (err) {
+        // Simulation fallback if local backend is offline during browser demo
+        alert(`Order Dispatched via Autonomous Pipeline!\\n\\nEntity: ${entityName} (${state})\\nRegistered Agent: Antochi Trusted Agent\\n\\nRedirecting to your unified client dashboard...`);
+        switchView('portal');
+      }
+    }
+
+    function toggleBensonDrawer() {
+      const drawer = document.getElementById('benson-drawer');
+      drawer.classList.toggle('translate-x-full');
+    }
+
+    function sendBensonMessage() {
+      const input = document.getElementById('benson-input');
+      const val = input.value.trim();
+      if (!val) return;
+
+      const msgContainer = document.getElementById('benson-messages');
+      const userBubble = document.createElement('div');
+      userBubble.className = "bg-slate-100 text-slate-800 p-2.5 rounded-lg text-xs self-end ml-6";
+      userBubble.innerText = val;
+      msgContainer.appendChild(userBubble);
+      input.value = "";
+
+      setTimeout(() => {
+        const botBubble = document.createElement('div');
+        botBubble.className = "bg-blue-50 text-brand-900 p-2.5 rounded-lg text-xs border border-blue-100";
+        botBubble.innerHTML = `<strong>Benson:</strong> I checked our Texas SOS filing radar for that. Your entity Articles of Organization are certified. Under D-13 compliance, your BOI initial filing must be attested personally by you before Day 90. Would you like me to prepare the pre-filled FinCEN draft?`;
+        msgContainer.appendChild(botBubble);
+        msgContainer.scrollTop = msgContainer.scrollHeight;
+      }, 600);
+    }
+  </script>
+</body>
+</html>
